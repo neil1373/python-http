@@ -6,11 +6,11 @@
 
 ## Filter features
 
-1. (mandatory) Keyword
+1. **(mandatory)** Keyword
 
-2. number of maximuum listing items
+2. number of maximum listing items
 
-3. locations (Taiwan or Abroad)
+3. items location (Taiwan or Abroad)
 
 4. ratings (prior)
 
@@ -19,7 +19,7 @@
 	* 優選賣家
 	* 商城賣家
 
-## Object "Product"
+## Object "product"
 
 * name
 
