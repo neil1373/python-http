@@ -10,9 +10,9 @@
 
 2. number of maximuum listing items
 
-3. locations(Taiwan or Abroad)
+3. locations (Taiwan or Abroad)
 
-4. ratings
+4. ratings (prior)
 
 5. seller type
 
@@ -29,6 +29,8 @@
 
 * photo_count
 
-* photolinks (list)
+* photolinks (<code>list</code>)
 
+* Average Rating
 
+* Rating Counts (<code>list, [total, 1, 2, 3, 4, 5]</code>)

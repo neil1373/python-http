@@ -9,6 +9,8 @@ class product(object):
     weblink = 'weblink'
     photo_count = 0
     photolinks = []
+    avg_rating = 4.0
+    rating_count_list = [] #[total, 1, 2, 3, 4, 5]
 
 def shopeeAPI_Scraper(keyword, n_items = 30, minPrice = 1, maxPrice = 200000000, locations = '', ratingFilter = 3, preferred = False, officialMall = False):
     print(str.lower(str(preferred)))
@@ -61,6 +63,12 @@ def shopeeAPI_Scraper(keyword, n_items = 30, minPrice = 1, maxPrice = 200000000,
         setattr(product_object, 'photo_count', product_photo_count)
         setattr(product_object, 'photolinks', product_photolinks)
 
+        product_avg_rating = product_data['item']['item_rating']['rating_star']
+        setattr(product_object, 'avg_rating', product_avg_rating)
+
+        product_rating_count = product_data['item']['item_rating']['rating_count']
+        setattr(product_object, 'rating_count_list', product_rating_count)
+        
         product_list.append(product_object)
         time.sleep(0.15) # to avoid of being recognized as robot by shopee server
     return product_list
