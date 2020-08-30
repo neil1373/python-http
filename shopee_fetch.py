@@ -68,15 +68,15 @@ def shopeeAPI_Scraper(keyword, n_items = 30, minPrice = 1, maxPrice = 200000000,
 
         product_rating_count = product_data['item']['item_rating']['rating_count']
         setattr(product_object, 'rating_count_list', product_rating_count)
-        
+
         product_list.append(product_object)
-        time.sleep(0.15) # to avoid of being recognized as robot by shopee server
+        time.sleep(0.05) # to avoid of being recognized as robot by shopee server
     return product_list
     
 def main():
     # Testing functions
     product_list = shopeeAPI_Scraper(keyword = 'iPhone 11', n_items = 40, locations = -1, ratingFilter = 4)
-    print(product_list[30].photolinks)
+    print(product_list[30].rating_count_list)
     # Simple Filters
     '''
     keyword: <str>
